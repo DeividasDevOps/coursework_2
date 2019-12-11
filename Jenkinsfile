@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("_/hello-world")
+        app = docker.build("linux_tweet_app")
     }
 
     stage('Test image') {
