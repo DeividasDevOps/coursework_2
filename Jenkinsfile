@@ -1,7 +1,7 @@
 pipeline {
     agent any 
             stages {
-                stage('Clone Repo') {
+                stage('Clone Repositary') {
                     steps {
                         checkout([$class: 'GitSCM',
                                   branches: [[name: '*/Coursework2DS']],
