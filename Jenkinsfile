@@ -27,7 +27,7 @@ pipeline {
                 stage('Push to DockerHub') {
                     steps {
                         script {
-                            dockerImage = docker.build('DeividasDevOps/coursework2' + ':v2')
+                            dockerImage = docker.build('DeividasDevOps/coursework_2' + ':v2')
                             docker.withRegistry('', 'dsdo') {
                                 dockerImage.push()
                             }
