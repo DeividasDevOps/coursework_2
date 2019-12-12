@@ -1,13 +1,7 @@
-# use a node base image
-FROM node:7-onbuild
-
-# set maintainer
-LABEL maintainer "Dsiuik200@caledonian.ac.uk"
-
-# set a health check
-HEALTHCHECK --interval=5s \
-            --timeout=5s \
-            CMD curl -f http://20.42.35.234:8000 || exit 1
-
-# tell docker what port to expose
-EXPOSE 8000
+#Node image
+FROM node:6.14.2
+#Show docker the port to expose
+EXPOSE 8080
+#Copy server.js
+COPY server.js .
+CMD node server.js
