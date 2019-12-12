@@ -11,7 +11,7 @@ pipeline {
                                   userRemoteConfigs: [[url: 'https://github.com/DeividasDevOps/coursework_2.git']]])
                     }
                 }
-                stage('Testing') {
+                stage('Test') {
                     environment {
                         scannerHome = tool 'SonarQube'
                     }
